@@ -72,9 +72,10 @@ nav a:hover{
 .wilayah h2{
     text-align: center;
     color: white;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     padding:15px 0 ;
     font-family: Impact;
+    font-weight: normal;
 }
 .wilayah img{
     width: 100%;
@@ -99,22 +100,19 @@ nav a:hover{
     transition: 1s;
 }
 
-.menuberita{
-    height: 500px;
-}
-
 .infografik {
     padding: 15px 85px;
     background-color: tomato;
-    
 }
 
 .infografik h2{
     text-align: center;
     padding: 20px;
     font-family: Impact;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     color:white;
+    font-weight: normal;
+
 }
 
 .infografik img{
@@ -129,8 +127,15 @@ nav a:hover{
     font-size: 30px;
     font-family: 'coiny';
     color: white;
-    margin: 15px 0px 0 -18px;
+    margin: 40px 0px 0 -18px;
     z-index: 2;
+}
+
+.infografik P{
+    margin: 20px auto;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 170px;
 }
 
 /* fungsi anak kandung mengatur element lain dengan action elemen lain */
@@ -146,6 +151,129 @@ nav a:hover{
     text-align: center;
 }
 
+.menuberita {
+    padding: 15px 85px;
+    background-color: rgb(73, 73, 73);
+    height:500px;
+}
+.menuberita h2{
+    padding: 25px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    letter-spacing: 4px;
+    font-weight: normal;
+}
+.berita{
+    display: grid;
+    grid-template-rows: repeat(1, auto);
+    grid-template-columns: repeat(3, auto);
+    text-align: left;
+}
+
+.subberita img{
+    width: 500px;
+    transition: .5s;
+}
+.subberita img:hover{
+    width: 550px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.subberita p{
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.menunavig{
+    padding: 15px 85px;
+    height: 300px;
+    background-color: tomato;
+}
+
+.subnavig{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(1, auto);
+    text-align: center;
+}
+
+.menunavig h2{
+    padding: 25px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    letter-spacing: 4px;
+    font-weight: normal;
+}
+
+.subnavig img{
+    height: 200px;
+    transition: .5s;
+}
+
+.subnavig img:hover{
+    height: 230px;
+    transition: .5s;
+}
+
+footer{
+    padding: 15px 85px;
+    height: 300px;
+    background-color: midnightblue;
+    display: grid;
+    grid-template-areas: "footer-left footer-right"
+                         "footer-left kakikanan";
+    grid-template-columns: 35% 65%;
+}
+
+.footer-left{
+    grid-area: footer-left;
+}
+
+.footer-left img{
+    height: 80px;
+    margin-top: 25px;
+}
+.kemsos{
+    color: white;
+    font-weight: bolder;
+}
+
+.alamat{
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.footer-right{
+    grid-area: footer-right;
+    justify-self: end;
+}
+
+.footer-right img{
+    width: 200px;
+}
+
+.kakikanan{
+    grid-area: kakikanan;
+    justify-self: end;
+    align-self: end;
+}
+
+.kakikanan h2{
+    color: white;
+    font-family: coiny;
+    font-weight: normal;
+}
+
+.submedsos img{
+    height: 40px;
+    margin: 5px 20px 20px 0;
+}
 /* @media only screen and (max-width: 500px){
     .info{
         grid-template-columns: repeat(1, auto);
