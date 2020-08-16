@@ -10,6 +10,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 102;
 }
 
 .navbar-fixed-top.scrolled {
@@ -53,12 +54,13 @@ nav a:hover{
     margin-top: 90px;
     height: 90px;
     margin-left: 80px;
+
 }
 
 .top-header p{
     color: white;
     margin-left: 95px;
-    width: 600px;
+    width: 500px;
     font-family: coiny;
     text-shadow: 2px 2px slategray;
     font-size: 25px;
@@ -103,6 +105,8 @@ nav a:hover{
 .infografik {
     padding: 15px 85px;
     background-color: tomato;
+    min-height: 200px;
+    height: auto;
 }
 
 .infografik h2{
@@ -228,7 +232,8 @@ nav a:hover{
 
 footer{
     padding: 15px 85px;
-    height: 300px;
+    min-height: 300px;
+    height: auto;
     background-color: midnightblue;
     display: grid;
     grid-template-areas: "footer-left footer-right"
@@ -289,8 +294,79 @@ footer{
     height: 40px;
     margin: 5px 20px 20px 0;
 }
-/* @media only screen and (max-width: 500px){
+
+/* whatsapp button */
+
+.float{
+	position:fixed;
+	width:50px;
+	height:50px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+  transition: .5s;
+}
+
+.my-float{
+	margin-top:11px;
+}
+
+.float:hover{
+  transform:scale(1.1,1.1);
+  transition: .5s;
+}
+
+.wabutton p{
+    position:fixed;
+    width:60px;
+    height:auto;
+    bottom:100px;
+    right:35px;
+    color:black;
+    font-weight:bolder;
+    text-align:center;
+    font-size:12px;
+    z-index:99;
+    transition: .5s;
+    display: none;
+}
+
+.float:hover ~ p:last-child {
+    display: block;
+    transition: .5s;
+  }
+
+@media only screen and (max-width: 500px){
+    
+    .top-header p{
+        width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .top-header img{
+        margin-left: 180px;
+    }
+    .wilayah p{
+        font-size: 12px;
+        width: 50vw;
+    }
     .info{
         grid-template-columns: repeat(1, auto);
     }
-} */
+    footer{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .kakikanan{
+        justify-self: center;
+        align-self: center;
+    }
+
+}
