@@ -154,7 +154,8 @@ nav a:hover{
 .menuberita {
     padding: 15px 85px;
     background-color: rgb(73, 73, 73);
-    height:500px;
+    height:auto;
+    min-height: 500px;
 }
 .menuberita h2{
     padding: 25px;
@@ -165,18 +166,19 @@ nav a:hover{
     font-weight: normal;
 }
 .berita{
-    display: grid;
-    grid-template-rows: repeat(1, auto);
-    grid-template-columns: repeat(3, auto);
-    text-align: left;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
 }
-
+.subberita{
+    margin: 5px 0;
+}
 .subberita img{
-    width: 500px;
+    width: 400px;
     transition: .5s;
 }
 .subberita img:hover{
-    width: 550px;
+    width: 450px;
     cursor: pointer;
     transition: .5s;
 }
@@ -190,15 +192,15 @@ nav a:hover{
 
 .menunavig{
     padding: 15px 85px;
-    height: 300px;
+    height: auto;
+    min-height: 300px;
     background-color: tomato;
 }
 
 .subnavig{
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(1, auto);
-    text-align: center;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
 }
 
 .menunavig h2{
@@ -211,13 +213,17 @@ nav a:hover{
 }
 
 .subnavig img{
-    height: 200px;
+    height: 170px;
+    width: 300px;
     transition: .5s;
+    filter: grayscale(100);
+    margin: 10px 0;
 }
 
 .subnavig img:hover{
-    height: 230px;
+    transform: scale(1.2,1.2);
     transition: .5s;
+    filter: grayscale(0);
 }
 
 footer{
@@ -262,6 +268,15 @@ footer{
     grid-area: kakikanan;
     justify-self: end;
     align-self: end;
+}
+.kakikanan img{
+    filter: grayscale(100);
+}
+
+.kakikanan img:hover{
+    transform: scale(1.2,1.2);
+    filter: grayscale(0);
+    transition: .5s;
 }
 
 .kakikanan h2{
